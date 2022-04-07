@@ -22,3 +22,31 @@ unsigned funcaoHash(char chave[], unsigned tamanhoVetor){ //função hash com ch
 }
 ```
 Todas as palavras do livro, exceto as stopwords, foram inseridas na tabela hash. As páginas em que cada palavra aparece aparece por ordem de importância, com base no TF-IDF.
+
+##Resultados
+Para cada consulta no índice, é chamada a função de buscar no índice. A função de busca calcula a função hash para aquela palavra e, em seguida, chama a função de busca no dicionário dinâmico.
+
+
+Função de busca no índice:
+```
+tipoDado *buscarNaTabelaHash(tipoTabelaHash *tabelaHash, char *chave){
+    unsigned pos = funcaoHash(chave, tabelaHash->tamanhoTabHash);
+
+    return buscarPorChaveNaLista(&(tabelaHash->tabHash[pos]), chave);
+}
+```
+
+Função de busca no dicionário dinâmico:
+```
+tipoDado *buscarPorChaveNaLista(tipoLista *lista, char *chave){
+    tipoNo *aux;
+    aux = lista->prim;
+    while((aux!=NULL) && (strcmp(aux->dado.palavra, chave) != 0)){
+        aux = aux->prox;
+    }
+    if(aux){
+        return &aux->dado;
+    }
+    return NULL;
+}
+```
