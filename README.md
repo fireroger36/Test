@@ -51,3 +51,5 @@ tipoDado *buscarPorChaveNaLista(tipoLista *lista, char *chave){
 }
 ```
 
+## Discussão
+O dicionário estático é extremamente eficaz para o armazenamento das stopwords, visto que nunca mudam e a busca é muito eficiente. O dicionário estático, por outro lado, é extremamente eficaz para o índice em si. A tabela hash implementada pode ser alterada varias vezes com um custo ótimo de eficiência.
