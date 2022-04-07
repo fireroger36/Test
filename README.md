@@ -8,7 +8,7 @@ Existem 3 tipos de dicionário:
 
 Para resolver o problema do indice remissivo, foram criados um dicionário estático para armazenamento da sequência de stopwords e um dicionário dinâmico implementado com hashing com endereçamento aberto (tabela hash).
 
-Função Hash utilizada:
+Abaixo segue a função Hash utilizada:
 ```
 unsigned funcaoHash(char chave[], unsigned tamanhoVetor){ //função hash com chave do tipo string
     unsigned cont = 0;
@@ -21,4 +21,4 @@ unsigned funcaoHash(char chave[], unsigned tamanhoVetor){ //função hash com ch
     return pos;
 }
 ```
-
+Todas as palavras do livro, exceto as stopwords, foram inseridas na tabela hash.
