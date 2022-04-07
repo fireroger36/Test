@@ -21,4 +21,4 @@ unsigned funcaoHash(char chave[], unsigned tamanhoVetor){ //função hash com ch
     return pos;
 }
 ```
-Todas as palavras do livro, exceto as stopwords, foram inseridas na tabela hash.
+Todas as palavras do livro, exceto as stopwords, foram inseridas na tabela hash. As páginas em que cada palavra aparece aparece por ordem de importância, com base no TF-IDF.
