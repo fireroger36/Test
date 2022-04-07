@@ -23,7 +23,7 @@ unsigned funcaoHash(char chave[], unsigned tamanhoVetor){ //função hash com ch
 ```
 Todas as palavras do livro, exceto as stopwords, foram inseridas na tabela hash. As páginas em que cada palavra aparece aparece por ordem de importância, com base no TF-IDF.
 
-##Resultados
+## Resultados
 Para cada consulta no índice, é chamada a função de buscar no índice. A função de busca calcula a função hash para aquela palavra e, em seguida, chama a função de busca no dicionário dinâmico.
 
 
